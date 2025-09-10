@@ -156,8 +156,7 @@ function App() {
           <p>Let's connect and discuss opportunities</p>
           <div className="contact-links">
             <a href="mailto:harokevin0@gmail.com">Email</a>
-            <a href="tel:+15095947909">Phone</a>
-            <a href="https://linkedin.com/in/kevinHaro" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/harokevin" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
             <a href="https://github.com/harokevin" target="_blank" rel="noopener noreferrer">
