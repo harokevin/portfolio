@@ -3,24 +3,60 @@ import './App.css'
 function App() {
   const projects = [
     {
-      title: "Project One",
-      description: "A modern web application built with React and TypeScript",
-      technologies: ["React", "TypeScript", "Node.js"],
-      github: "https://github.com/harokevin/project-one",
-      demo: "https://project-one-demo.com"
+      title: "Enterprise Web Applications",
+      description: "Scalable cloud-native applications for enterprise clients using React, TypeScript, and .NET Core deployed via Azure DevOps",
+      technologies: ["React", "TypeScript", ".NET Core", "C#", "Azure DevOps", "Azure Functions"],
+      company: "Lantern Studios",
+      period: "2020-2025"
     },
     {
-      title: "Project Two", 
-      description: "Full-stack application with REST API and database integration",
-      technologies: ["Python", "FastAPI", "PostgreSQL"],
-      github: "https://github.com/harokevin/project-two",
-      demo: "https://project-two-demo.com"
+      title: "Global Fulfillment Platform",
+      description: "Cloud-native microservices supporting global product fulfillment workflows across multiple warehouse systems",
+      technologies: ["Node.js", "GraphQL", "AWS Lambda", "DynamoDB", "Terraform"],
+      company: "Nike",
+      period: "2019-2020"
+    },
+    {
+      title: "Asset Tracking Platform",
+      description: "Internal platform with real-time updates and intuitive UI for tracking assets across warehouse operations",
+      technologies: ["React", "AWS Amplify", "GraphQL", "Real-time APIs"],
+      company: "Nike",
+      period: "2019-2020"
+    },
+    {
+      title: "Nuclear Waste Cleanup Simulation",
+      description: "Enhanced simulation system for nuclear waste cleanup with improved data models and user workflows",
+      technologies: ["Data Modeling", "SQL", "Systems Integration"],
+      company: "Washington River Protection Solutions",
+      period: "2016-2017"
     }
   ]
 
   const skills = [
-    "JavaScript/TypeScript", "React", "Node.js", "Python", 
-    "SQL", "Git", "AWS", "Docker", "REST APIs"
+    "JavaScript/TypeScript", "React", "Node.js", "C#", ".NET Core",
+    "GraphQL", "REST APIs", "AWS", "Azure", "SQL", "PostgreSQL", 
+    "DynamoDB", "Terraform", "CI/CD", "Microservices", "Cloud Architecture"
+  ]
+
+  const experience = [
+    {
+      title: "Full Stack Software Engineer",
+      company: "Lantern Studios",
+      period: "Oct 2020 – July 2025",
+      location: "Portland, OR"
+    },
+    {
+      title: "Software Engineer Contractor", 
+      company: "Nike (via Apex Systems)",
+      period: "June 2019 – Oct 2020",
+      location: "Portland, OR"
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Wildland Labs", 
+      period: "Oct 2016 – June 2019",
+      location: "Richland, WA"
+    }
   ]
 
   return (
@@ -28,8 +64,8 @@ function App() {
       <header className="hero">
         <div className="hero-content">
           <h1>Kevin Haro</h1>
-          <h2>Software Engineer</h2>
-          <p>Building modern, scalable web applications with clean code and user-focused design</p>
+          <h2>Senior Full-Stack Software Engineer</h2>
+          <p>10+ years of experience building scalable cloud-native applications. Passionate about clean code, mentoring, and delivering business value through technology.</p>
           <div className="hero-links">
             <a href="#about" className="btn-primary">About Me</a>
             <a href="#projects" className="btn-secondary">View Projects</a>
@@ -41,10 +77,29 @@ function App() {
         <div className="container">
           <h2>About Me</h2>
           <p>
-            I'm a passionate software engineer with experience in full-stack development. 
-            I enjoy solving complex problems and creating efficient, maintainable solutions.
-            My goal is to build software that makes a positive impact on users' lives.
+            I'm a senior full-stack engineer with 10+ years of experience building scalable cloud-native applications. 
+            Proficient in JavaScript/TypeScript, C#, and AWS/Azure. I have a proven track record of designing and 
+            developing enterprise web applications, implementing CI/CD pipelines, and mentoring junior developers. 
+            I frequently collaborate with stakeholders, PMs, and QA teams to align software delivery with business goals.
           </p>
+        </div>
+      </section>
+
+      <section id="experience" className="experience">
+        <div className="container">
+          <h2>Professional Experience</h2>
+          <div className="experience-timeline">
+            {experience.map((job, index) => (
+              <div key={index} className="experience-item">
+                <h3>{job.title}</h3>
+                <h4>{job.company}</h4>
+                <div className="experience-meta">
+                  <span className="period">{job.period}</span>
+                  <span className="location">{job.location}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -63,7 +118,7 @@ function App() {
 
       <section id="projects" className="projects">
         <div className="container">
-          <h2>Featured Projects</h2>
+          <h2>Featured Projects & Experience</h2>
           <div className="projects-grid">
             {projects.map((project, index) => (
               <div key={index} className="project-card">
@@ -74,16 +129,23 @@ function App() {
                     <span key={techIndex} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-                <div className="project-links">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                  </a>
+                <div className="project-meta">
+                  <span className="company">{project.company}</span>
+                  <span className="period">{project.period}</span>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="education" className="education">
+        <div className="container">
+          <h2>Education</h2>
+          <div className="education-item">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <h4>Central Washington University – Ellensburg, WA</h4>
+            <span className="graduation-year">2016</span>
           </div>
         </div>
       </section>
@@ -93,7 +155,8 @@ function App() {
           <h2>Get In Touch</h2>
           <p>Let's connect and discuss opportunities</p>
           <div className="contact-links">
-            <a href="mailto:kevin@example.com">Email</a>
+            <a href="mailto:harokevin0@gmail.com">Email</a>
+            <a href="tel:+15095947909">Phone</a>
             <a href="https://linkedin.com/in/kevinHaro" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>

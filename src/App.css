@@ -105,8 +105,58 @@ section {
   color: #666;
 }
 
-.skills {
+.experience {
   background-color: #fff;
+}
+
+.experience-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #667eea;
+}
+
+.experience-item h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-item h4 {
+  color: #667eea;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.experience-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience-meta .period {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.experience-meta .location {
+  color: #666;
+  font-style: italic;
+}
+
+.skills {
+  background-color: #f8f9fa;
 }
 
 .skills-grid {
@@ -133,7 +183,7 @@ section {
 }
 
 .projects {
-  background-color: #f8f9fa;
+  background-color: #fff;
 }
 
 .projects-grid {
@@ -201,6 +251,61 @@ section {
 .project-links a:hover {
   background-color: #667eea;
   color: white;
+}
+
+.project-meta {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-meta .company {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.project-meta .period {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.education {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.education-item {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-item h4 {
+  color: #667eea;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.graduation-year {
+  background-color: #667eea;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
 .contact {
