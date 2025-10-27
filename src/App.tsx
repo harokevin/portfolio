@@ -1,4 +1,5 @@
 import './App.css'
+import imgUrl from '/1539364367601.jpg'
 
 function App() {
   const projects = [
@@ -61,7 +62,8 @@ function App() {
 
   return (
     <div className="portfolio">
-      <header className="hero">
+      <header className="hero" style={{flexDirection: "column"}}>
+        <img src={imgUrl} alt="Kevin Haro" className="profile-image" style={{ width: "25%", clipPath: "circle()" }} />
         <div className="hero-content">
           <h1>Kevin Haro</h1>
           <h2>Senior Full-Stack Software Engineer</h2>
